@@ -1,0 +1,20 @@
+import java.util.*;
+
+class Main {
+    public static void main(String args[]) {
+        System.out.print("Enter a number:");
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt() , sum=0;
+        int temp=n;
+        while(n!=0){
+            int digit=n%10;
+            int fact=1;
+            for(int i=1;i<=digit;i++){
+                fact=fact*i;
+            }
+            sum=sum+fact;
+            n=n/10;
+        }
+        System.out.println(temp==sum?"Strong number":"Not a strong number");
+    }
+}
