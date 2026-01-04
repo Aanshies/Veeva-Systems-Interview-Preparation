@@ -10,3 +10,17 @@ class Box{
     return width*height*depth;
   }
 }
+
+class Main{
+ public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Enter the width:");
+    int w=sc.nextInt();
+    System.out.print("Enter the Height:");
+    int h=sc.nextInt();
+    System.out.print("Enter the Depth:");
+    int d=sc.nextInt();
+    Box b=new Box(w,h,d);
+    System.out.println("Volume of the Box:"+b.Volume());
+ }
+}
