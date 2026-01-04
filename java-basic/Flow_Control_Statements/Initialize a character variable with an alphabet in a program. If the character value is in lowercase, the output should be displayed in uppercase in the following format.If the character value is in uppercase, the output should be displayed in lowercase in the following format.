@@ -1,0 +1,15 @@
+import java.util.*;
+
+class Main {
+    public static void main(String args[]) {
+        System.out.println("Enter a character:");
+        Scanner sc=new Scanner(System.in);
+        char character = sc.next().charAt(0);
+        if(Character.isLowerCase(character)){
+            System.out.print(Character.toUpperCase(character));
+        }
+        else{
+            System.out.print(Character.toLowerCase(character));
+        }
+    }
+}
