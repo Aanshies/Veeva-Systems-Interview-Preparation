@@ -1,0 +1,19 @@
+import java.util.*;
+
+class Main {
+    public static void main(String args[]) {
+        System.out.println("Menu:\n 1.R \t 2.B\t 3.G\t 4.O\t 5.Y\t 6.W");
+        System.out.print("Enter a color code(alphabet only):");
+        Scanner sc=new Scanner(System.in);
+        char character = sc.next().charAt(0);
+        switch(character){
+            case 'R'-> System.out.print("Red");
+            case 'B'-> System.out.print("Blue");
+            case 'G'-> System.out.print("Green");
+            case 'O'-> System.out.print("Orange");
+            case 'Y'-> System.out.print("Yellow");
+            case 'W'-> System.out.print("White");
+            default->System.out.println("Invalid Input");
+        }
+    }
+}
