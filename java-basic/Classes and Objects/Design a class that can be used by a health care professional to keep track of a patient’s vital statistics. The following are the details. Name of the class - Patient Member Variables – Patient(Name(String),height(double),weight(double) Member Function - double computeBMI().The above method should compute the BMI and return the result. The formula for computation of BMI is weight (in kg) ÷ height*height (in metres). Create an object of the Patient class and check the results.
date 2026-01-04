@@ -1,0 +1,26 @@
+import java.util.*;
+class Patient{
+    String name;
+    double height,weight;
+    Patient(String name,double height,double weight){
+        this.name=name;
+        this.weight=weight;
+        this.height=height;
+    }
+    double computeBMI(){
+        return weight/(height*height);
+    }
+}
+class Main{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter patient name:");
+        String name=sc.nextLine();
+        System.out.print("Enter height(in meters:");
+        double height=sc.nextDouble();
+        System.out.print("Enter weigth(in kgs):");
+        double weight=sc.nextDouble();
+        Patient p=new Patient(name,height,weight);
+        System.out.println("BMI of Patient:"+p.computeBMI());
+     }
+}
