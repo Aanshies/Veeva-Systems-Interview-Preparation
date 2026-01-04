@@ -1,0 +1,24 @@
+import java.math.*;
+import java.util.*;
+class Calculator{
+  static int powerInt(int num1,int num2){
+    int res=(int)Math.pow(num1, num2);
+    return res;
+  }
+  static double powerDouble(double num1,double num2){
+    double res1=Math.pow(num1, num2);
+    return res1;
+  }
+}
+class Main{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter integer base & exponent:");
+        int n1=sc.nextInt(),n2=sc.nextInt();
+        System.out.print("Enter Double base & exponent:");
+        double s1=sc.nextDouble(),s2=sc.nextDouble();
+        Calculator calc=new Calculator();
+        System.out.print("Result of powerInt:"+(int)calc.powerInt(n1, n2));
+        System.out.println("Result of powerDouble:"+(double)calc.powerDouble(s1, s2));
+    }
+}
