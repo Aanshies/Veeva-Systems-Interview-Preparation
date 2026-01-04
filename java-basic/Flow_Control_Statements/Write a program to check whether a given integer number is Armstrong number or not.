@@ -1,0 +1,16 @@
+import java.util.*;
+
+class Main {
+    public static void main(String args[]) {
+        System.out.print("Enter a number:");
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt() , cube=0;
+        int temp=n;
+        while(n!=0){
+            int digit=n%10;
+            cube+=(digit*digit*digit);
+            n=n/10;
+        }
+        System.out.print(cube==temp?"Amstrong number":"Not a Amstrong number");
+            }
+        }
