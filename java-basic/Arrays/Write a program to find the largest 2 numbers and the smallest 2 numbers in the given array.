@@ -1,0 +1,23 @@
+import java.util.*;
+
+class Main{
+   public static void main(String args[]){
+    Scanner sc=new Scanner(System.in);
+    System.out.println("Enter the array elements(Enter -1 to stop):");
+    ArrayList<Integer> a=new ArrayList<>();
+    ArrayList<Integer> res=new ArrayList<>();
+    boolean isDuplicate;
+    int x;
+    while(true){
+        x=sc.nextInt();
+        if(x==-1) break;
+        a.add(x);
+        }
+    for(int i=0;i<a.size();i++){
+        if(!res.contains(a.get(i))){
+          res.add(a.get(i));
+        }
+    }
+    System.out.println("Array after removing duplicates:"+res);
+   }
+}
