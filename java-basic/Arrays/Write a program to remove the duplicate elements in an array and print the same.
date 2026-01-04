@@ -1,25 +1,23 @@
 import java.util.*;
 
 class Main{
-    public static void main(String args[]){
-        Scanner sc=new Scanner(System.in);
-        if(args.length!=4){
-        System.out.println("Enter 4 elements only:");
-        return;
+   public static void main(String args[]){
+    Scanner sc=new Scanner(System.in);
+    System.out.println("Enter the array elements(Enter -1 to stop):");
+    ArrayList<Integer> a=new ArrayList<>();
+    ArrayList<Integer> res=new ArrayList<>();
+    boolean isDuplicate;
+    int x;
+    while(true){
+        x=sc.nextInt();
+        if(x==-1) break;
+        a.add(x);
         }
-        int a[][]=new int[2][2];
-        int k=0;
-        for(int i=0;i<2;i++){
-            for(int j=0;j<2;j++){
-                a[i][j]=Integer.parseInt(args[k++]);
-            }
-        }
-        System.out.println("Reversed array:");
-        for(int i=1;i>=0;i--){
-            for(int j=1;j>=0;j--){
-              System.out.print(a[i][j]+" ");
-            }
-        System.out.println();
+    for(int i=0;i<a.size();i++){
+        if(!res.contains(a.get(i))){
+          res.add(a.get(i));
         }
     }
+    System.out.println("Array after removing duplicates:"+res);
+   }
 }
