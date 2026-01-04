@@ -1,0 +1,12 @@
+import java.util.*;
+class Box{
+  int width,height,depth;
+  Box(int w,int h,int d){
+    width=w;
+    height=h;
+    depth=d;
+  }
+  int Volume(){
+    return width*height*depth;
+  }
+}
