@@ -1,0 +1,98 @@
+import java.util.*;
+
+class Person{
+    String name;
+    String dob;
+    Person(String name,String dob){
+        this.name=name;
+        this.dob=dob;
+    }
+    void displayPerson(){
+        System.out.println("Name:"+name+"\nDate Of Birth:"+dob);
+    }
+}
+class Teacher extends Person{
+    double salary;
+    String subject;
+    Teacher(String name,String dob,double salary,String subject){
+         super(name,dob);
+         this.salary=salary;
+         this.subject=subject;
+    }
+    void displayTeacher(){
+        displayPerson();
+        System.out.println("Salary:"+salary+"\nSubject:"+subject);
+    }
+}
+class Student extends Person{
+    int studentId;
+    Student(String name,String dob,int studentId){
+        super(name,dob);
+        this.studentId=studentId;
+    }
+    void displayStudent(){
+        displayPerson();
+        System.out.println("Student ID:"+studentId);
+    }
+}
+class CollegeStudent extends Student{
+    String collegeName;
+    String yearOfStudy;
+    CollegeStudent(String name,String dob,int studentId,String collegeName,String yearOfStudy){
+        super(name,dob,studentId);
+        this.collegeName=collegeName;
+        this.yearOfStudy=yearOfStudy;
+    }
+    void displayCollegeStudent(){
+        displayStudent();
+        System.out.println("College Name:"+collegeName+"\nYear of Study:"+yearOfStudy);
+    }
+}
+class Main{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter Person details:\nName:");
+        String pname=sc.nextLine();
+        System.out.print("Date of Birth:");
+        String pdob=sc.nextLine();
+        Person p=new Person(pname,pdob);
+        System.out.println("----Person----");
+        p.displayPerson();
+        System.out.print("***Enter Teacher details:\nName:");
+        String tname=sc.nextLine();
+        System.out.print("Date of Birth:");
+        String dob=sc.nextLine();
+        System.out.print("Salary:");
+        double sal=sc.nextDouble();
+        sc.nextLine();
+        System.out.print("Subject:");
+        String subject=sc.nextLine();
+        Teacher t=new Teacher(tname, dob, sal, subject);
+        System.out.println("----Teacher----");
+        t.displayTeacher();
+        System.out.print("***Enter Student details:\nName:");
+        String sname=sc.nextLine();
+        System.out.print("Date of Birth:");
+        String sdob=sc.nextLine();
+        System.out.print("Student Id:");
+        int sid=sc.nextInt();
+        sc.nextLine();
+        Student s=new Student(sname, sdob, sid);
+        System.out.println("----Student----");
+        s.displayStudent();
+        System.out.print("***Enter College Student details:\nName:");
+        String cname=sc.nextLine();
+        System.out.print("Date of Birth:");
+        String cdob=sc.nextLine();
+        System.out.print("Student ID:");
+        int csid=sc.nextInt();
+        sc.nextLine();
+        System.out.print("College Name:");
+        String colname=sc.nextLine();
+        System.out.print("Year of Study:");
+        String yos=sc.nextLine();
+        CollegeStudent cs=new CollegeStudent(cname,cdob,csid,colname,yos);
+        System.out.println("-----College Student----");
+        cs.displayCollegeStudent();   
+    }
+}
