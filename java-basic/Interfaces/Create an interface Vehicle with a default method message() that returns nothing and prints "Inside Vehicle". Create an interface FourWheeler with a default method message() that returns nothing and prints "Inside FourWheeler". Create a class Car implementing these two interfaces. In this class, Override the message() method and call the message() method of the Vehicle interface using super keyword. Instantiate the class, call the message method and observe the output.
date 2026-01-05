@@ -1,0 +1,20 @@
+interface Vehicle{
+   default void message(){
+      System.out.println("Inside Vehicle");
+   }
+}
+
+interface FourWheeler{
+   default void message(){
+      System.out.println("Inside Fourwheeler");
+   } 
+}
+class Main implements Vehicle,FourWheeler{
+   public void message(){
+      Vehicle.super.message();
+   }
+   public static void main(String[] args) {
+      Main m=new Main();
+      m.message();
+   }
+}
