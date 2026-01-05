@@ -1,0 +1,38 @@
+class Fruit{
+    String name;
+    String taste;
+    String size;
+    Fruit(String name,String taste){
+     this.name=name;
+     this.taste=taste;
+    }
+    void eat(){
+        System.out.println("Fruit Name: "+name+"\nTaste: "+taste);
+    }
+}
+class Apple extends Fruit{
+    Apple(){
+        super("Apple","sweet");
+    }
+    @Override
+    void eat(){
+     System.out.println("Fruit Name: Apple"+"\nTaste: Sweet");
+    }
+}
+class Orange extends Fruit{
+    Orange(){
+        super("Orange","sour");
+    }
+    @Override
+    void eat(){
+     System.out.println("Fruit Name: Orange"+"\nTaste: Sour");
+    }
+}
+class Main{
+    public static void main(String args[]){
+     Apple a=new Apple();
+     a.eat();
+     Orange o=new Orange();
+     o.eat();
+    }
+}
