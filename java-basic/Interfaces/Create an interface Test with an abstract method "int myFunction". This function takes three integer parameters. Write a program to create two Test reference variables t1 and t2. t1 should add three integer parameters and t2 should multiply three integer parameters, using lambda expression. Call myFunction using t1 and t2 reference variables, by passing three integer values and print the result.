@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+interface Test{
+   int myFunction(int a,int b,int c);
+}
+class Main{
+   public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      System.out.print("Enter 3 integers:");
+      int x=sc.nextInt(),y=sc.nextInt(),z=sc.nextInt();
+      Test t1=(a,b,c)-> a+b+c;
+      Test t2=(a,b,c)->a*b*c;
+      System.out.println("Addition:"+t1.myFunction(x, y, z));
+      System.out.println("Multiplication:"+t2.myFunction(x, y, z));
+
+   }
+}
