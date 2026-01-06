@@ -17,4 +17,8 @@ public class Main{
         p.play();
     }
 }
-   
+
+
+//run
+//javac music/Playable.java music/string/Veena.java music/wind/Saxophone.java live/Main.java
+//javac live.java
