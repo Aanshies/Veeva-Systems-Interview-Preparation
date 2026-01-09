@@ -1,23 +1,33 @@
-import java.util.*;
+import java.util.Arrays;
 
-class Main{
-   public static void main(String args[]){
-    Scanner sc=new Scanner(System.in);
-    System.out.println("Enter the array elements(Enter -1 to stop):");
-    ArrayList<Integer> a=new ArrayList<>();
-    ArrayList<Integer> res=new ArrayList<>();
-    boolean isDuplicate;
-    int x;
-    while(true){
-        x=sc.nextInt();
-        if(x==-1) break;
-        a.add(x);
-        }
-    for(int i=0;i<a.size();i++){
-        if(!res.contains(a.get(i))){
-          res.add(a.get(i));
-        }
+public class FindExtremes {
+
+    public static void main(String[] args) {
+        int[] numbers = {10, 5, 20, 3, 45, 1, 30, 2, 50};
+
+        findExtremes(numbers);
     }
-    System.out.println("Array after removing duplicates:"+res);
-   }
+
+    public static void findExtremes(int[] arr) {
+        // Check if the array has at least two elements
+        if (arr == null || arr.length < 2) {
+            System.out.println("Array must contain at least two numbers.");
+            return;
+        }
+
+        // Sort the array in ascending order
+        Arrays.sort(arr);
+
+        // The smallest two numbers are the first two elements
+        int smallest1 = arr[0];
+        int smallest2 = arr[1];
+
+        // The largest two numbers are the last two elements
+        int largest1 = arr[arr.length - 1];
+        int largest2 = arr[arr.length - 2];
+
+        System.out.println("Original array: " + Arrays.toString(arr));
+        System.out.println("Smallest two numbers: " + smallest1 + ", " + smallest2);
+        System.out.println("Largest two numbers: " + largest1 + ", " + largest2);
+    }
 }
